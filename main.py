@@ -72,6 +72,11 @@ while not game_over:
     if game_over:
         continue
 
+    if len(player1_marks) + len(player2_marks) == 9:
+        print("Draw!")
+        game_over = True
+        continue
+
     game_over = check_victory(player1_marks) or check_victory(player2_marks)
 
     if game_over:
